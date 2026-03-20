@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Auth UI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="auth-shell">
+      <!-- Main interactive card. The .active class is toggled by script.js -->
+      <section class="auth-card" id="authCard" aria-label="Authentication forms">
+        <div class="form-panel sign-up-panel" aria-hidden="true">
+          <form class="auth-form" action="#" novalidate>
+            <span class="eyebrow">Join the platform</span>
+            <h1>Create Account</h1>
+            <p class="form-copy">Create your account and start exploring premium site features.</p>
+
+            <div class="social-row" aria-label="Social sign up options">
+              <button class="social-btn" type="button" aria-label="Sign up with Apple"></button>
+              <button class="social-btn" type="button" aria-label="Sign up with Google">G</button>
+              <button class="social-btn" type="button" aria-label="Sign up with LinkedIn">in</button>
+            </div>
+
+            <span class="divider">or use your email</span>
+
+            <label class="input-group">
+              <span>Name</span>
+              <input type="text" name="name" placeholder="Alex Morgan" />
+            </label>
+
+            <label class="input-group">
+              <span>Email</span>
+              <input type="email" name="email" placeholder="alex@example.com" />
+            </label>
+
+            <label class="input-group">
+              <span>Password</span>
+              <input type="password" name="password" placeholder="Create a password" />
+            </label>
+
+            <button class="primary-btn" type="submit">Sign Up</button>
+          </form>
+        </div>
+
+        <div class="form-panel sign-in-panel">
+          <form class="auth-form" action="#" novalidate>
+            <span class="eyebrow">Welcome again</span>
+            <h1>Sign In</h1>
+            <p class="form-copy">Access your workspace and continue your experience in seconds.</p>
+
+            <div class="social-row" aria-label="Social sign in options">
+              <button class="social-btn" type="button" aria-label="Sign in with Apple"></button>
+              <button class="social-btn" type="button" aria-label="Sign in with Google">G</button>
+              <button class="social-btn" type="button" aria-label="Sign in with LinkedIn">in</button>
+            </div>
+
+            <span class="divider">or use your email account</span>
+
+            <label class="input-group">
+              <span>Email</span>
+              <input type="email" name="email" placeholder="you@example.com" />
+            </label>
+
+            <label class="input-group">
+              <span>Password</span>
+              <input type="password" name="password" placeholder="Enter your password" />
+            </label>
+
+            <a class="text-link" href="#">Forgot your password?</a>
+            <button class="primary-btn" type="submit">Sign In</button>
+          </form>
+        </div>
+
+        <!-- Sliding overlay that introduces each state and provides the toggle buttons -->
+        <aside class="overlay-shell" aria-hidden="true">
+          <div class="overlay-track">
+            <section class="overlay-panel overlay-left">
+              <span class="overlay-badge">Already a member?</span>
+              <h2>Welcome Back!</h2>
+              <p>Enter your personal details to use all of site features</p>
+              <button class="ghost-btn" type="button" id="signInBtn">Sign In</button>
+            </section>
+
+            <section class="overlay-panel overlay-right">
+              <span class="overlay-badge">New here?</span>
+              <h2>Hello, Friend!</h2>
+              <p>Register with your personal details to use all of site features</p>
+              <button class="ghost-btn" type="button" id="signUpBtn">Sign Up</button>
+            </section>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
